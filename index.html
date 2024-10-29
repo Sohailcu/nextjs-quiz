@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Next.js Practice Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Title Section -->
+  <header>
+    <img src="./Backdrop-design.jpg" alt="Title Image">
+    <h1>Next.js Practice Quiz</h1>
+    <p>Create By "IT MAN PAKISTAN"</p>
+
+<!-- Timer Display (right-aligned) -->
+    <div id="quiz-timer" class="timer-container">TIME START - <span id="total-time"></span> / <span id="remaining-time"></span>
+    </div>
+</header>
+
+  <!-- Login Section -->
+  <section id="login-section" class="box">
+    <h2>Login to Start Quiz</h2>
+    <input type="text" id="name" placeholder="Enter Your Name" required>
+    <input type="email" id="email" placeholder="Enter Your Email" required>
+    <button onclick="startQuiz()">Start Quiz</button>
+  </section>
+
+  <!-- Quiz Section -->
+  <section id="quiz-section" class="hidden box">
+    <div id="question-container">
+      <p id="question"></p>
+      <input type="text" id="answer" placeholder="Your Answer">
+      <button onclick="submitAnswer()">Submit</button>
+    </div>
+  </section>
+  <p id="timer"></p>
+  <div id="progress-bar">
+    <div id="progress"></div>
+  </div>
+  
+
+ <!-- Result Section -->
+<section id="result-section" class="hidden box">
+    <p id="result-text"></p>
+    <p id="score"></p>
+    
+    <!-- Button to show answer sheet -->
+    <button id="show-answer-sheet-btn" class="hidden" onclick="toggleAnswerSheet()">Show Answer Sheet</button>
+  
+    <!-- Placeholder for the answer sheet -->
+    <div id="answer-sheet" class="hidden"></div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
